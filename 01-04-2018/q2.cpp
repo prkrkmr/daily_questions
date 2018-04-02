@@ -11,6 +11,7 @@ int main()
     {
         cin>>str;
         int len = str.length();
+        flag = 0;
         for(i = 0; i < (len/2)+1; i++)
         {
             if(str[i] == str[len-i-1])
