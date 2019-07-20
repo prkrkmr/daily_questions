@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int T,N,i,j,flag=1,max;
+    cin>>T;
+    while(T--){
+        stack <int> st;
+        max=0;
+        cin>>N;
+        int arr[N];
+        for(i=0;i<N;i++)
+            cin>>arr[i];
+        while(N--){
+            if(arr[N]>=max){
+                max=arr[N];
+                st.push(max);
+            }
+        }
+        while(!st.empty()){
+            cout<<st.top()<<" ";
+            st.pop();
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
